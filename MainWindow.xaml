@@ -1,0 +1,34 @@
+﻿<Window x:Class="Komivoyager.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Komivoyager"
+        mc:Ignorable="d"
+        Title="Komivoyager" Height="557" Width="700">
+    <Window.Resources>
+        <ControlTemplate x:Key="PointTemplate" TargetType="{x:Type ContentControl}"/>
+    </Window.Resources>
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="file:///C:/Users/Zae/source/repos/Komivoyager/gui2.jpg" TileMode="FlipY" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Canvas x:Name="PointsMap" HorizontalAlignment="Left" Height="450" VerticalAlignment="Top" Width="450" Margin="10,9,0,0" Background="White">
+            <StackPanel Canvas.Left="85" Orientation="Vertical" Canvas.Top="295" Width="60"/>
+        </Canvas>
+        <TextBox x:Name="AX_TextBoX" HorizontalAlignment="Left" Height="50" Margin="525,10,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="50" FontSize="20" />
+        <TextBox x:Name="AY_TextBoX" HorizontalAlignment="Left" Height="50" Margin="581,10,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="50" FontSize="20" />
+        <TextBox x:Name="BX_TextBoX" HorizontalAlignment="Left" Height="50" Margin="525,65,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="50" FontSize="20" />
+        <TextBox x:Name="BY_TextBoX" HorizontalAlignment="Left" Height="50" Margin="581,65,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="50" FontSize="20" />
+        <TextBox x:Name="PointsCount_TextBox" HorizontalAlignment="Left" Height="50" Margin="581,145,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="50" FontSize="40" />
+        <Label Content="A" HorizontalAlignment="Left" Margin="485,10,0,0" VerticalAlignment="Top" Height="50" Width="35" FontSize="40"/>
+        <Label Content="B" HorizontalAlignment="Left" Margin="485,60,0,0" VerticalAlignment="Top" Height="60" Width="35" FontSize="40"/>
+        <Label Content="Ilość &#x0a;punktów" HorizontalAlignment="Left" Margin="485,135,0,0" VerticalAlignment="Top" Height="60" Width="90" FontSize="20"/>
+        <Button x:Name="GenerateRandom_Button" Content="Generuj losowe" Margin="460,311,1,0" VerticalAlignment="Top" FontSize="20" Background="#FF8080C9" BorderBrush="#FFDA1616" Foreground="Black" Click="GenerateRandom_Button_Click"/>
+        <Button x:Name="LoadFromFile_Button" Content="Wczytaj z pliku" HorizontalAlignment="Left" Margin="460,347,0,0" VerticalAlignment="Top" Width="231" FontSize="20" Background="#FF8080C9" BorderBrush="#FFDA1616" Foreground="Black" Click="LoadFromFile_Button_Click"/>
+        <Button x:Name="SaveToFile_Button" Content="Zapisz do pliku" HorizontalAlignment="Left" Margin="460,383,0,0" VerticalAlignment="Top" Width="232" FontSize="20" Background="#FF8080C9" BorderBrush="#FFDA1616" Foreground="Black" Click="SaveToFile_Button_Click"/>
+        <Button x:Name="Solution_Button" Content="Rozwiąż" HorizontalAlignment="Left" Margin="461,419,0,0" VerticalAlignment="Top" Width="230" FontSize="20" Background="#FF8080C9" BorderBrush="#FFDA1616" Foreground="Black" Click="Solution_Button_Click" />
+        <Label x:Name="result_label" Content="" HorizontalAlignment="Left" Margin="10,464,0,0" VerticalAlignment="Top" Width="672" Height="52" FontSize="24" Foreground="#FFFF0101" Visibility="Hidden"/>
+
+    </Grid>
+</Window>
